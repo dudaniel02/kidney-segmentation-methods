@@ -50,3 +50,6 @@ Thumbs.db
 # ── Secrets / credentials ─────────────────────────────────────────────────────
 .env
 *.key
+
+# ── Local metrics / results ───────────────────────────────────────────────────
+thesis_metrics*.json

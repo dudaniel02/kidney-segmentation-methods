@@ -1,0 +1,4 @@
+torch==2.10.0
+numpy==1.26.4
+nibabel==5.4.0
+monai==1.4.0
