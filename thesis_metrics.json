@@ -1,0 +1,1840 @@
+{
+  "DINOv2": {
+    "meta": {
+      "status": "error",
+      "gpu": "Tesla V100-SXM3-32GB",
+      "params_total_M": "N/A",
+      "params_trainable_M": "N/A",
+      "architecture_note": "2D patch classifier + seg head"
+    },
+    "training": {
+      "epochs_completed": 9,
+      "planned_epochs": 10,
+      "epoch_at_best": 9,
+      "convergence_ratio_pct": 100.0,
+      "total_training_time_h": 3.65,
+      "avg_epoch_time_min": 24.3,
+      "batch_size": "N/A",
+      "learning_rate": "N/A"
+    },
+    "epoch_1": {
+      "kidney_dice": 0.3206,
+      "tumor_dice": 0.0685,
+      "mean_dice": 0.1945,
+      "train_loss": 0.5279,
+      "val_loss": 0.5696
+    },
+    "best_checkpoint": {
+      "epoch": 9,
+      "kidney_dice": 0.4344,
+      "tumor_dice": 0.1491,
+      "mean_dice": 0.2917,
+      "train_loss": 0.3197,
+      "val_loss": 0.5319,
+      "loss_gap_val_minus_train": 0.2122,
+      "tumor_to_kidney_ratio": 0.343
+    },
+    "improvement_ep1_to_best": {
+      "kidney_dice_delta": 0.1137,
+      "tumor_dice_delta": 0.0806,
+      "mean_dice_delta": 0.0972,
+      "val_loss_delta": 0.0378
+    },
+    "efficiency": {
+      "mean_dice_per_epoch": 0.0324,
+      "mean_dice_per_hour": 0.0799,
+      "mean_dice_std_5ep_window": 0.025
+    },
+    "full_history": [
+      {
+        "epoch": 1,
+        "train_loss": 0.5279,
+        "val_loss": 0.5696,
+        "kidney_dice": 0.3206,
+        "tumor_dice": 0.0685,
+        "mean_dice": 0.1945,
+        "epoch_time_min": 23.1
+      },
+      {
+        "epoch": 2,
+        "train_loss": 0.4347,
+        "val_loss": 0.5497,
+        "kidney_dice": 0.3647,
+        "tumor_dice": 0.1452,
+        "mean_dice": 0.255,
+        "epoch_time_min": 23.3
+      },
+      {
+        "epoch": 3,
+        "train_loss": 0.4009,
+        "val_loss": 0.532,
+        "kidney_dice": 0.4118,
+        "tumor_dice": 0.157,
+        "mean_dice": 0.2844,
+        "epoch_time_min": 23.2
+      },
+      {
+        "epoch": 4,
+        "train_loss": 0.3784,
+        "val_loss": 0.5628,
+        "kidney_dice": 0.3942,
+        "tumor_dice": 0.0608,
+        "mean_dice": 0.2275,
+        "epoch_time_min": 22.9
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.3571,
+        "val_loss": 0.5297,
+        "kidney_dice": 0.4348,
+        "tumor_dice": 0.128,
+        "mean_dice": 0.2814,
+        "epoch_time_min": 23.1
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.3494,
+        "val_loss": 0.5525,
+        "kidney_dice": 0.4161,
+        "tumor_dice": 0.0608,
+        "mean_dice": 0.2384,
+        "epoch_time_min": 23.2
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.3329,
+        "val_loss": 0.5382,
+        "kidney_dice": 0.4244,
+        "tumor_dice": 0.1209,
+        "mean_dice": 0.2726,
+        "epoch_time_min": 23.1
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.3213,
+        "val_loss": 0.5403,
+        "kidney_dice": 0.4196,
+        "tumor_dice": 0.1044,
+        "mean_dice": 0.262,
+        "epoch_time_min": 22.9
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.3197,
+        "val_loss": 0.5319,
+        "kidney_dice": 0.4344,
+        "tumor_dice": 0.1491,
+        "mean_dice": 0.2917,
+        "epoch_time_min": 18.3
+      }
+    ]
+  },
+  "I-MedSAM": {
+    "meta": {
+      "status": "interrupted",
+      "gpu": "Tesla V100-SXM3-32GB",
+      "params_total_M": 94.33,
+      "params_trainable_M": 0.6,
+      "architecture_note": "SAM ViT-B backbone, adapter fine-tuning"
+    },
+    "training": {
+      "epochs_completed": 16,
+      "planned_epochs": 100,
+      "epoch_at_best": 14,
+      "convergence_ratio_pct": 87.5,
+      "total_training_time_h": 10.13,
+      "avg_epoch_time_min": 38.0,
+      "batch_size": 8,
+      "learning_rate": "0.0005"
+    },
+    "epoch_1": {
+      "kidney_dice": 0.2664,
+      "tumor_dice": 0.2635,
+      "mean_dice": 0.2649,
+      "train_loss": 1.4163,
+      "val_loss": 1.0214
+    },
+    "best_checkpoint": {
+      "epoch": 14,
+      "kidney_dice": 0.414,
+      "tumor_dice": 0.2082,
+      "mean_dice": 0.3111,
+      "train_loss": 0.9763,
+      "val_loss": 0.9438,
+      "loss_gap_val_minus_train": -0.0325,
+      "tumor_to_kidney_ratio": 0.503
+    },
+    "improvement_ep1_to_best": {
+      "kidney_dice_delta": 0.1476,
+      "tumor_dice_delta": -0.0553,
+      "mean_dice_delta": 0.0462,
+      "val_loss_delta": 0.0776
+    },
+    "efficiency": {
+      "mean_dice_per_epoch": 0.0222,
+      "mean_dice_per_hour": 0.0307,
+      "mean_dice_std_5ep_window": 0.0333
+    },
+    "full_history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.4163,
+        "val_loss": 1.0214,
+        "kidney_dice": 0.2664,
+        "tumor_dice": 0.2635,
+        "mean_dice": 0.2649,
+        "epoch_time_min": 37.5
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.3298,
+        "val_loss": 0.9978,
+        "kidney_dice": 0.3563,
+        "tumor_dice": 0.2441,
+        "mean_dice": 0.3002,
+        "epoch_time_min": 39.2
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.2167,
+        "val_loss": 1.0165,
+        "kidney_dice": 0.2613,
+        "tumor_dice": 0.131,
+        "mean_dice": 0.1962,
+        "epoch_time_min": 36.8
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.1505,
+        "val_loss": 0.9656,
+        "kidney_dice": 0.3492,
+        "tumor_dice": 0.1947,
+        "mean_dice": 0.2719,
+        "epoch_time_min": 37.9
+      },
+      {
+        "epoch": 5,
+        "train_loss": 1.0955,
+        "val_loss": 0.9807,
+        "kidney_dice": 0.3167,
+        "tumor_dice": 0.2386,
+        "mean_dice": 0.2777,
+        "epoch_time_min": 40.5
+      },
+      {
+        "epoch": 6,
+        "train_loss": 1.1131,
+        "val_loss": 0.9746,
+        "kidney_dice": 0.2945,
+        "tumor_dice": 0.1816,
+        "mean_dice": 0.238,
+        "epoch_time_min": 36.3
+      },
+      {
+        "epoch": 7,
+        "train_loss": 1.0532,
+        "val_loss": 0.9652,
+        "kidney_dice": 0.3488,
+        "tumor_dice": 0.2505,
+        "mean_dice": 0.2997,
+        "epoch_time_min": 36.4
+      },
+      {
+        "epoch": 8,
+        "train_loss": 1.027,
+        "val_loss": 0.9716,
+        "kidney_dice": 0.3243,
+        "tumor_dice": 0.2273,
+        "mean_dice": 0.2758,
+        "epoch_time_min": 35.8
+      },
+      {
+        "epoch": 9,
+        "train_loss": 1.0198,
+        "val_loss": 0.9687,
+        "kidney_dice": 0.3267,
+        "tumor_dice": 0.2157,
+        "mean_dice": 0.2712,
+        "epoch_time_min": 40.6
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.9843,
+        "val_loss": 0.9249,
+        "kidney_dice": 0.3656,
+        "tumor_dice": 0.2467,
+        "mean_dice": 0.3062,
+        "epoch_time_min": 39.8
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.9822,
+        "val_loss": 0.9323,
+        "kidney_dice": 0.3609,
+        "tumor_dice": 0.2402,
+        "mean_dice": 0.3006,
+        "epoch_time_min": 38.5
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.9761,
+        "val_loss": 0.9842,
+        "kidney_dice": 0.3278,
+        "tumor_dice": 0.2324,
+        "mean_dice": 0.2801,
+        "epoch_time_min": 36.3
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.9855,
+        "val_loss": 1.0317,
+        "kidney_dice": 0.2877,
+        "tumor_dice": 0.1554,
+        "mean_dice": 0.2215,
+        "epoch_time_min": 36.0
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.9763,
+        "val_loss": 0.9438,
+        "kidney_dice": 0.414,
+        "tumor_dice": 0.2082,
+        "mean_dice": 0.3111,
+        "epoch_time_min": 37.5
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.9712,
+        "val_loss": 0.9323,
+        "kidney_dice": 0.3702,
+        "tumor_dice": 0.2252,
+        "mean_dice": 0.2977,
+        "epoch_time_min": 35.6
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.9615,
+        "val_loss": 0.9704,
+        "kidney_dice": 0.32,
+        "tumor_dice": 0.1895,
+        "mean_dice": 0.2548,
+        "epoch_time_min": 37.7
+      }
+    ]
+  },
+  "MedNeXt": {
+    "meta": {
+      "status": "running",
+      "gpu": "Tesla V100-SXM3-32GB",
+      "params_total_M": 10.6,
+      "params_trainable_M": 10.6,
+      "architecture_note": "MedNeXt-B k=3, fully trained"
+    },
+    "training": {
+      "epochs_completed": 30,
+      "planned_epochs": 100,
+      "epoch_at_best": 30,
+      "convergence_ratio_pct": 100.0,
+      "total_training_time_h": 7.05,
+      "avg_epoch_time_min": 14.1,
+      "batch_size": 2,
+      "learning_rate": "0.0001"
+    },
+    "epoch_1": {
+      "kidney_dice": 0.1718,
+      "tumor_dice": 0.0093,
+      "mean_dice": 0.0905,
+      "train_loss": 2.501,
+      "val_loss": 2.097
+    },
+    "best_checkpoint": {
+      "epoch": 30,
+      "kidney_dice": 0.7388,
+      "tumor_dice": 0.2623,
+      "mean_dice": 0.5006,
+      "train_loss": 1.2877,
+      "val_loss": 1.4308,
+      "loss_gap_val_minus_train": 0.1431,
+      "tumor_to_kidney_ratio": 0.355
+    },
+    "improvement_ep1_to_best": {
+      "kidney_dice_delta": 0.5671,
+      "tumor_dice_delta": 0.253,
+      "mean_dice_delta": 0.41,
+      "val_loss_delta": 0.6662
+    },
+    "efficiency": {
+      "mean_dice_per_epoch": 0.0167,
+      "mean_dice_per_hour": 0.071,
+      "mean_dice_std_5ep_window": 0.0243
+    },
+    "full_history": [
+      {
+        "epoch": 1,
+        "train_loss": 2.501,
+        "val_loss": 2.097,
+        "kidney_dice": 0.1718,
+        "tumor_dice": 0.0093,
+        "mean_dice": 0.0905,
+        "epoch_time_min": 13.5
+      },
+      {
+        "epoch": 2,
+        "train_loss": 2.2477,
+        "val_loss": 2.028,
+        "kidney_dice": 0.2618,
+        "tumor_dice": 0.0214,
+        "mean_dice": 0.1416,
+        "epoch_time_min": 13.4
+      },
+      {
+        "epoch": 3,
+        "train_loss": 2.0239,
+        "val_loss": 2.1381,
+        "kidney_dice": 0.3112,
+        "tumor_dice": 0.02,
+        "mean_dice": 0.1656,
+        "epoch_time_min": 13.7
+      },
+      {
+        "epoch": 4,
+        "train_loss": 2.2071,
+        "val_loss": 1.989,
+        "kidney_dice": 0.5013,
+        "tumor_dice": 0.0473,
+        "mean_dice": 0.2743,
+        "epoch_time_min": 16.0
+      },
+      {
+        "epoch": 5,
+        "train_loss": 2.2354,
+        "val_loss": 2.0132,
+        "kidney_dice": 0.4886,
+        "tumor_dice": 0.0417,
+        "mean_dice": 0.2651,
+        "epoch_time_min": 15.2
+      },
+      {
+        "epoch": 6,
+        "train_loss": 1.6468,
+        "val_loss": 1.6909,
+        "kidney_dice": 0.5039,
+        "tumor_dice": 0.0581,
+        "mean_dice": 0.281,
+        "epoch_time_min": 14.1
+      },
+      {
+        "epoch": 7,
+        "train_loss": 1.9392,
+        "val_loss": 1.7138,
+        "kidney_dice": 0.5692,
+        "tumor_dice": 0.0951,
+        "mean_dice": 0.3321,
+        "epoch_time_min": 14.0
+      },
+      {
+        "epoch": 8,
+        "train_loss": 2.0315,
+        "val_loss": 1.7628,
+        "kidney_dice": 0.5755,
+        "tumor_dice": 0.101,
+        "mean_dice": 0.3382,
+        "epoch_time_min": 14.2
+      },
+      {
+        "epoch": 9,
+        "train_loss": 1.924,
+        "val_loss": 1.6621,
+        "kidney_dice": 0.6469,
+        "tumor_dice": 0.0927,
+        "mean_dice": 0.3698,
+        "epoch_time_min": 14.9
+      },
+      {
+        "epoch": 10,
+        "train_loss": 1.5398,
+        "val_loss": 1.5355,
+        "kidney_dice": 0.6489,
+        "tumor_dice": 0.1475,
+        "mean_dice": 0.3982,
+        "epoch_time_min": 13.1
+      },
+      {
+        "epoch": 11,
+        "train_loss": 1.8838,
+        "val_loss": 1.445,
+        "kidney_dice": 0.6312,
+        "tumor_dice": 0.1218,
+        "mean_dice": 0.3765,
+        "epoch_time_min": 13.8
+      },
+      {
+        "epoch": 12,
+        "train_loss": 1.9579,
+        "val_loss": 1.4363,
+        "kidney_dice": 0.7103,
+        "tumor_dice": 0.1592,
+        "mean_dice": 0.4347,
+        "epoch_time_min": 13.6
+      },
+      {
+        "epoch": 13,
+        "train_loss": 1.8172,
+        "val_loss": 1.3877,
+        "kidney_dice": 0.6953,
+        "tumor_dice": 0.1749,
+        "mean_dice": 0.4351,
+        "epoch_time_min": 14.7
+      },
+      {
+        "epoch": 14,
+        "train_loss": 1.3882,
+        "val_loss": 1.5884,
+        "kidney_dice": 0.6915,
+        "tumor_dice": 0.1546,
+        "mean_dice": 0.423,
+        "epoch_time_min": 14.6
+      },
+      {
+        "epoch": 15,
+        "train_loss": 1.4793,
+        "val_loss": 1.7782,
+        "kidney_dice": 0.6371,
+        "tumor_dice": 0.1282,
+        "mean_dice": 0.3826,
+        "epoch_time_min": 14.2
+      },
+      {
+        "epoch": 16,
+        "train_loss": 1.7956,
+        "val_loss": 1.7444,
+        "kidney_dice": 0.7247,
+        "tumor_dice": 0.1757,
+        "mean_dice": 0.4502,
+        "epoch_time_min": 14.4
+      },
+      {
+        "epoch": 17,
+        "train_loss": 1.8006,
+        "val_loss": 1.5021,
+        "kidney_dice": 0.6698,
+        "tumor_dice": 0.1806,
+        "mean_dice": 0.4252,
+        "epoch_time_min": 15.7
+      },
+      {
+        "epoch": 18,
+        "train_loss": 1.7021,
+        "val_loss": 1.4448,
+        "kidney_dice": 0.6628,
+        "tumor_dice": 0.2093,
+        "mean_dice": 0.4361,
+        "epoch_time_min": 14.6
+      },
+      {
+        "epoch": 19,
+        "train_loss": 1.5654,
+        "val_loss": 1.3782,
+        "kidney_dice": 0.6874,
+        "tumor_dice": 0.2119,
+        "mean_dice": 0.4497,
+        "epoch_time_min": 14.2
+      },
+      {
+        "epoch": 20,
+        "train_loss": 1.5298,
+        "val_loss": 1.4409,
+        "kidney_dice": 0.6666,
+        "tumor_dice": 0.2086,
+        "mean_dice": 0.4376,
+        "epoch_time_min": 13.2
+      },
+      {
+        "epoch": 21,
+        "train_loss": 1.3611,
+        "val_loss": 1.6351,
+        "kidney_dice": 0.7048,
+        "tumor_dice": 0.1541,
+        "mean_dice": 0.4294,
+        "epoch_time_min": 13.7
+      },
+      {
+        "epoch": 22,
+        "train_loss": 1.5602,
+        "val_loss": 2.1864,
+        "kidney_dice": 0.6188,
+        "tumor_dice": 0.2403,
+        "mean_dice": 0.4295,
+        "epoch_time_min": 13.6
+      },
+      {
+        "epoch": 23,
+        "train_loss": 1.6054,
+        "val_loss": 1.5422,
+        "kidney_dice": 0.6966,
+        "tumor_dice": 0.216,
+        "mean_dice": 0.4563,
+        "epoch_time_min": 14.0
+      },
+      {
+        "epoch": 24,
+        "train_loss": 1.7065,
+        "val_loss": 1.291,
+        "kidney_dice": 0.689,
+        "tumor_dice": 0.2215,
+        "mean_dice": 0.4553,
+        "epoch_time_min": 13.7
+      },
+      {
+        "epoch": 25,
+        "train_loss": 1.736,
+        "val_loss": 1.4875,
+        "kidney_dice": 0.6913,
+        "tumor_dice": 0.1825,
+        "mean_dice": 0.4369,
+        "epoch_time_min": 13.4
+      },
+      {
+        "epoch": 26,
+        "train_loss": 1.3988,
+        "val_loss": 1.4122,
+        "kidney_dice": 0.692,
+        "tumor_dice": 0.2545,
+        "mean_dice": 0.4732,
+        "epoch_time_min": 13.5
+      },
+      {
+        "epoch": 27,
+        "train_loss": 1.5019,
+        "val_loss": 1.2929,
+        "kidney_dice": 0.7089,
+        "tumor_dice": 0.2841,
+        "mean_dice": 0.4965,
+        "epoch_time_min": 13.2
+      },
+      {
+        "epoch": 28,
+        "train_loss": 1.2944,
+        "val_loss": 1.3513,
+        "kidney_dice": 0.6459,
+        "tumor_dice": 0.2698,
+        "mean_dice": 0.4579,
+        "epoch_time_min": 13.9
+      },
+      {
+        "epoch": 29,
+        "train_loss": 1.4442,
+        "val_loss": 1.2649,
+        "kidney_dice": 0.7354,
+        "tumor_dice": 0.2337,
+        "mean_dice": 0.4846,
+        "epoch_time_min": 14.6
+      },
+      {
+        "epoch": 30,
+        "train_loss": 1.2877,
+        "val_loss": 1.4308,
+        "kidney_dice": 0.7388,
+        "tumor_dice": 0.2623,
+        "mean_dice": 0.5006,
+        "epoch_time_min": 14.2
+      }
+    ]
+  },
+  "UKAN": {
+    "meta": {
+      "status": "error",
+      "gpu": "Tesla V100-SXM3-32GB",
+      "params_total_M": 16.16,
+      "params_trainable_M": 16.16,
+      "architecture_note": "3D UNet with KAN bottleneck"
+    },
+    "training": {
+      "epochs_completed": 62,
+      "planned_epochs": 100,
+      "epoch_at_best": 44,
+      "convergence_ratio_pct": 71.0,
+      "total_training_time_h": 13.03,
+      "avg_epoch_time_min": 12.6,
+      "batch_size": 2,
+      "learning_rate": "0.0001"
+    },
+    "epoch_1": {
+      "kidney_dice": 0.6181,
+      "tumor_dice": 0.2047,
+      "mean_dice": 0.4114,
+      "train_loss": 1.967,
+      "val_loss": 0.9874
+    },
+    "best_checkpoint": {
+      "epoch": 44,
+      "kidney_dice": 0.9363,
+      "tumor_dice": 0.6482,
+      "mean_dice": 0.7922,
+      "train_loss": 0.8451,
+      "val_loss": 0.5815,
+      "loss_gap_val_minus_train": -0.2636,
+      "tumor_to_kidney_ratio": 0.692
+    },
+    "improvement_ep1_to_best": {
+      "kidney_dice_delta": 0.3181,
+      "tumor_dice_delta": 0.4434,
+      "mean_dice_delta": 0.3808,
+      "val_loss_delta": 0.4059
+    },
+    "efficiency": {
+      "mean_dice_per_epoch": 0.018,
+      "mean_dice_per_hour": 0.0608,
+      "mean_dice_std_5ep_window": 0.0457
+    },
+    "full_history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.967,
+        "val_loss": 0.9874,
+        "kidney_dice": 0.6181,
+        "tumor_dice": 0.2047,
+        "mean_dice": 0.4114,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.761,
+        "val_loss": 0.8829,
+        "kidney_dice": 0.7385,
+        "tumor_dice": 0.4216,
+        "mean_dice": 0.5801,
+        "epoch_time_min": 12.8
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.4264,
+        "val_loss": 0.9512,
+        "kidney_dice": 0.658,
+        "tumor_dice": 0.3257,
+        "mean_dice": 0.4919,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.5101,
+        "val_loss": 0.9177,
+        "kidney_dice": 0.7257,
+        "tumor_dice": 0.2631,
+        "mean_dice": 0.4944,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 5,
+        "train_loss": 1.4649,
+        "val_loss": 0.7397,
+        "kidney_dice": 0.7771,
+        "tumor_dice": 0.3129,
+        "mean_dice": 0.545,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 6,
+        "train_loss": 1.2909,
+        "val_loss": 0.781,
+        "kidney_dice": 0.8273,
+        "tumor_dice": 0.6074,
+        "mean_dice": 0.7173,
+        "epoch_time_min": 13.1
+      },
+      {
+        "epoch": 7,
+        "train_loss": 1.3224,
+        "val_loss": 0.7466,
+        "kidney_dice": 0.9402,
+        "tumor_dice": 0.4601,
+        "mean_dice": 0.7001,
+        "epoch_time_min": 13.3
+      },
+      {
+        "epoch": 8,
+        "train_loss": 1.2506,
+        "val_loss": 0.686,
+        "kidney_dice": 0.7642,
+        "tumor_dice": 0.3266,
+        "mean_dice": 0.5454,
+        "epoch_time_min": 13.8
+      },
+      {
+        "epoch": 9,
+        "train_loss": 1.2388,
+        "val_loss": 0.6344,
+        "kidney_dice": 0.8952,
+        "tumor_dice": 0.4217,
+        "mean_dice": 0.6585,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 10,
+        "train_loss": 1.1658,
+        "val_loss": 0.7085,
+        "kidney_dice": 0.7821,
+        "tumor_dice": 0.5078,
+        "mean_dice": 0.6449,
+        "epoch_time_min": 11.5
+      },
+      {
+        "epoch": 11,
+        "train_loss": 1.2507,
+        "val_loss": 0.9722,
+        "kidney_dice": 0.7775,
+        "tumor_dice": 0.2997,
+        "mean_dice": 0.5386,
+        "epoch_time_min": 12.9
+      },
+      {
+        "epoch": 12,
+        "train_loss": 1.1246,
+        "val_loss": 0.5807,
+        "kidney_dice": 0.8499,
+        "tumor_dice": 0.417,
+        "mean_dice": 0.6335,
+        "epoch_time_min": 12.8
+      },
+      {
+        "epoch": 13,
+        "train_loss": 1.0796,
+        "val_loss": 0.6126,
+        "kidney_dice": 0.7733,
+        "tumor_dice": 0.3766,
+        "mean_dice": 0.575,
+        "epoch_time_min": 13.2
+      },
+      {
+        "epoch": 14,
+        "train_loss": 1.1271,
+        "val_loss": 0.5802,
+        "kidney_dice": 0.8451,
+        "tumor_dice": 0.5447,
+        "mean_dice": 0.6949,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 15,
+        "train_loss": 1.0421,
+        "val_loss": 0.6576,
+        "kidney_dice": 0.7838,
+        "tumor_dice": 0.3738,
+        "mean_dice": 0.5788,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 16,
+        "train_loss": 1.0149,
+        "val_loss": 0.5988,
+        "kidney_dice": 0.8306,
+        "tumor_dice": 0.4816,
+        "mean_dice": 0.6561,
+        "epoch_time_min": 12.1
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.9754,
+        "val_loss": 0.8331,
+        "kidney_dice": 0.8784,
+        "tumor_dice": 0.4715,
+        "mean_dice": 0.6749,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 18,
+        "train_loss": 1.0013,
+        "val_loss": 0.7259,
+        "kidney_dice": 0.8965,
+        "tumor_dice": 0.5476,
+        "mean_dice": 0.722,
+        "epoch_time_min": 13.1
+      },
+      {
+        "epoch": 19,
+        "train_loss": 1.0795,
+        "val_loss": 0.5709,
+        "kidney_dice": 0.9076,
+        "tumor_dice": 0.4274,
+        "mean_dice": 0.6675,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.9494,
+        "val_loss": 0.5617,
+        "kidney_dice": 0.8024,
+        "tumor_dice": 0.3314,
+        "mean_dice": 0.5669,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 21,
+        "train_loss": 0.9151,
+        "val_loss": 0.688,
+        "kidney_dice": 0.8392,
+        "tumor_dice": 0.5319,
+        "mean_dice": 0.6855,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 22,
+        "train_loss": 0.9431,
+        "val_loss": 0.6466,
+        "kidney_dice": 0.7508,
+        "tumor_dice": 0.4958,
+        "mean_dice": 0.6233,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 23,
+        "train_loss": 0.9632,
+        "val_loss": 0.6677,
+        "kidney_dice": 0.8403,
+        "tumor_dice": 0.3269,
+        "mean_dice": 0.5836,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 24,
+        "train_loss": 0.9489,
+        "val_loss": 0.6397,
+        "kidney_dice": 0.8622,
+        "tumor_dice": 0.5559,
+        "mean_dice": 0.709,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.8549,
+        "val_loss": 0.5937,
+        "kidney_dice": 0.9086,
+        "tumor_dice": 0.5447,
+        "mean_dice": 0.7266,
+        "epoch_time_min": 13.0
+      },
+      {
+        "epoch": 26,
+        "train_loss": 0.8553,
+        "val_loss": 0.5453,
+        "kidney_dice": 0.8238,
+        "tumor_dice": 0.5436,
+        "mean_dice": 0.6837,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 27,
+        "train_loss": 0.8464,
+        "val_loss": 0.6882,
+        "kidney_dice": 0.8362,
+        "tumor_dice": 0.4561,
+        "mean_dice": 0.6461,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 28,
+        "train_loss": 0.849,
+        "val_loss": 0.5637,
+        "kidney_dice": 0.8139,
+        "tumor_dice": 0.5014,
+        "mean_dice": 0.6576,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 29,
+        "train_loss": 0.8838,
+        "val_loss": 0.5835,
+        "kidney_dice": 0.7748,
+        "tumor_dice": 0.6324,
+        "mean_dice": 0.7036,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 30,
+        "train_loss": 0.9839,
+        "val_loss": 0.6821,
+        "kidney_dice": 0.7833,
+        "tumor_dice": 0.3933,
+        "mean_dice": 0.5883,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 31,
+        "train_loss": 0.8456,
+        "val_loss": 0.5508,
+        "kidney_dice": 0.8851,
+        "tumor_dice": 0.5082,
+        "mean_dice": 0.6967,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 32,
+        "train_loss": 0.8924,
+        "val_loss": 0.6058,
+        "kidney_dice": 0.7291,
+        "tumor_dice": 0.599,
+        "mean_dice": 0.6641,
+        "epoch_time_min": 12.9
+      },
+      {
+        "epoch": 33,
+        "train_loss": 0.856,
+        "val_loss": 0.6227,
+        "kidney_dice": 0.7742,
+        "tumor_dice": 0.3618,
+        "mean_dice": 0.568,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 34,
+        "train_loss": 0.8957,
+        "val_loss": 0.7498,
+        "kidney_dice": 0.8653,
+        "tumor_dice": 0.4519,
+        "mean_dice": 0.6586,
+        "epoch_time_min": 13.0
+      },
+      {
+        "epoch": 35,
+        "train_loss": 0.9493,
+        "val_loss": 0.6326,
+        "kidney_dice": 0.799,
+        "tumor_dice": 0.6342,
+        "mean_dice": 0.7166,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 36,
+        "train_loss": 0.892,
+        "val_loss": 0.5311,
+        "kidney_dice": 0.922,
+        "tumor_dice": 0.5293,
+        "mean_dice": 0.7257,
+        "epoch_time_min": 13.4
+      },
+      {
+        "epoch": 37,
+        "train_loss": 0.884,
+        "val_loss": 0.683,
+        "kidney_dice": 0.7799,
+        "tumor_dice": 0.5699,
+        "mean_dice": 0.6749,
+        "epoch_time_min": 13.2
+      },
+      {
+        "epoch": 38,
+        "train_loss": 0.834,
+        "val_loss": 0.5813,
+        "kidney_dice": 0.8173,
+        "tumor_dice": 0.5333,
+        "mean_dice": 0.6753,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 39,
+        "train_loss": 0.8268,
+        "val_loss": 0.5244,
+        "kidney_dice": 0.8493,
+        "tumor_dice": 0.5126,
+        "mean_dice": 0.681,
+        "epoch_time_min": 13.2
+      },
+      {
+        "epoch": 40,
+        "train_loss": 0.9231,
+        "val_loss": 0.5925,
+        "kidney_dice": 0.7735,
+        "tumor_dice": 0.6207,
+        "mean_dice": 0.6971,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 41,
+        "train_loss": 1.0233,
+        "val_loss": 0.6679,
+        "kidney_dice": 0.8082,
+        "tumor_dice": 0.5802,
+        "mean_dice": 0.6942,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 42,
+        "train_loss": 1.0257,
+        "val_loss": 0.5644,
+        "kidney_dice": 0.8634,
+        "tumor_dice": 0.4649,
+        "mean_dice": 0.6642,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 43,
+        "train_loss": 0.8166,
+        "val_loss": 0.6158,
+        "kidney_dice": 0.8811,
+        "tumor_dice": 0.5743,
+        "mean_dice": 0.7277,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 44,
+        "train_loss": 0.8451,
+        "val_loss": 0.5815,
+        "kidney_dice": 0.9363,
+        "tumor_dice": 0.6482,
+        "mean_dice": 0.7922,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 45,
+        "train_loss": 0.7936,
+        "val_loss": 0.7212,
+        "kidney_dice": 0.7961,
+        "tumor_dice": 0.7026,
+        "mean_dice": 0.7494,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 46,
+        "train_loss": 0.7778,
+        "val_loss": 0.6364,
+        "kidney_dice": 0.8155,
+        "tumor_dice": 0.5499,
+        "mean_dice": 0.6827,
+        "epoch_time_min": 11.6
+      },
+      {
+        "epoch": 47,
+        "train_loss": 0.7735,
+        "val_loss": 0.6239,
+        "kidney_dice": 0.8511,
+        "tumor_dice": 0.5187,
+        "mean_dice": 0.6849,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 48,
+        "train_loss": 0.7745,
+        "val_loss": 0.5862,
+        "kidney_dice": 0.9293,
+        "tumor_dice": 0.6045,
+        "mean_dice": 0.7669,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 49,
+        "train_loss": 0.8037,
+        "val_loss": 0.5772,
+        "kidney_dice": 0.9422,
+        "tumor_dice": 0.5543,
+        "mean_dice": 0.7483,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 50,
+        "train_loss": 0.801,
+        "val_loss": 0.5515,
+        "kidney_dice": 0.9229,
+        "tumor_dice": 0.523,
+        "mean_dice": 0.723,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 51,
+        "train_loss": 0.7833,
+        "val_loss": 0.6004,
+        "kidney_dice": 0.8637,
+        "tumor_dice": 0.5915,
+        "mean_dice": 0.7276,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 52,
+        "train_loss": 0.8069,
+        "val_loss": 0.6146,
+        "kidney_dice": 0.7586,
+        "tumor_dice": 0.4626,
+        "mean_dice": 0.6106,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 53,
+        "train_loss": 0.8632,
+        "val_loss": 0.6887,
+        "kidney_dice": 0.729,
+        "tumor_dice": 0.4007,
+        "mean_dice": 0.5648,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 54,
+        "train_loss": 0.7747,
+        "val_loss": 0.554,
+        "kidney_dice": 0.899,
+        "tumor_dice": 0.5639,
+        "mean_dice": 0.7315,
+        "epoch_time_min": 13.2
+      },
+      {
+        "epoch": 55,
+        "train_loss": 0.8043,
+        "val_loss": 0.6682,
+        "kidney_dice": 0.6773,
+        "tumor_dice": 0.4502,
+        "mean_dice": 0.5637,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 56,
+        "train_loss": 0.7627,
+        "val_loss": 0.6836,
+        "kidney_dice": 0.8759,
+        "tumor_dice": 0.6375,
+        "mean_dice": 0.7567,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 57,
+        "train_loss": 0.7953,
+        "val_loss": 0.6505,
+        "kidney_dice": 0.7964,
+        "tumor_dice": 0.6673,
+        "mean_dice": 0.7319,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 58,
+        "train_loss": 0.7687,
+        "val_loss": 0.5842,
+        "kidney_dice": 0.8669,
+        "tumor_dice": 0.6194,
+        "mean_dice": 0.7432,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 59,
+        "train_loss": 0.777,
+        "val_loss": 0.5634,
+        "kidney_dice": 0.9551,
+        "tumor_dice": 0.6252,
+        "mean_dice": 0.7901,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 60,
+        "train_loss": 1.1202,
+        "val_loss": 0.4588,
+        "kidney_dice": 0.9062,
+        "tumor_dice": 0.5681,
+        "mean_dice": 0.7372,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 61,
+        "train_loss": 0.7202,
+        "val_loss": 0.6165,
+        "kidney_dice": 0.8729,
+        "tumor_dice": 0.5295,
+        "mean_dice": 0.7012,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 62,
+        "train_loss": 0.9331,
+        "val_loss": 0.5722,
+        "kidney_dice": 0.9011,
+        "tumor_dice": 0.5889,
+        "mean_dice": 0.745,
+        "epoch_time_min": 13.6
+      }
+    ]
+  },
+  "VISTA3D": {
+    "meta": {
+      "status": "completed",
+      "gpu": "Tesla V100-SXM3-32GB",
+      "params_total_M": "N/A",
+      "params_trainable_M": "N/A",
+      "architecture_note": "Pretrained VISTA3D, decoder fine-tuned"
+    },
+    "training": {
+      "epochs_completed": 60,
+      "planned_epochs": 60,
+      "epoch_at_best": 45,
+      "convergence_ratio_pct": 75.0,
+      "total_training_time_h": 12.08,
+      "avg_epoch_time_min": 12.1,
+      "batch_size": 2,
+      "learning_rate": "0.0002"
+    },
+    "epoch_1": {
+      "kidney_dice": 0.4908,
+      "tumor_dice": 0.1647,
+      "mean_dice": 0.3277,
+      "train_loss": 1.158,
+      "val_loss": 1.0355
+    },
+    "best_checkpoint": {
+      "epoch": 45,
+      "kidney_dice": 0.8108,
+      "tumor_dice": 0.5868,
+      "mean_dice": 0.6988,
+      "train_loss": 0.519,
+      "val_loss": 0.6917,
+      "loss_gap_val_minus_train": 0.1727,
+      "tumor_to_kidney_ratio": 0.724
+    },
+    "improvement_ep1_to_best": {
+      "kidney_dice_delta": 0.32,
+      "tumor_dice_delta": 0.4221,
+      "mean_dice_delta": 0.3711,
+      "val_loss_delta": 0.3438
+    },
+    "efficiency": {
+      "mean_dice_per_epoch": 0.0155,
+      "mean_dice_per_hour": 0.0578,
+      "mean_dice_std_5ep_window": 0.0592
+    },
+    "full_history": [
+      {
+        "epoch": 1,
+        "train_loss": 1.158,
+        "val_loss": 1.0355,
+        "kidney_dice": 0.4908,
+        "tumor_dice": 0.1647,
+        "mean_dice": 0.3277,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 2,
+        "train_loss": 1.1113,
+        "val_loss": 0.9927,
+        "kidney_dice": 0.393,
+        "tumor_dice": 0.2327,
+        "mean_dice": 0.3128,
+        "epoch_time_min": 12.5
+      },
+      {
+        "epoch": 3,
+        "train_loss": 1.0502,
+        "val_loss": 1.0369,
+        "kidney_dice": 0.5421,
+        "tumor_dice": 0.1416,
+        "mean_dice": 0.3418,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 4,
+        "train_loss": 1.0675,
+        "val_loss": 0.9075,
+        "kidney_dice": 0.54,
+        "tumor_dice": 0.1337,
+        "mean_dice": 0.3368,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 5,
+        "train_loss": 0.9614,
+        "val_loss": 0.9135,
+        "kidney_dice": 0.6378,
+        "tumor_dice": 0.2323,
+        "mean_dice": 0.4351,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 6,
+        "train_loss": 0.9333,
+        "val_loss": 0.8971,
+        "kidney_dice": 0.4487,
+        "tumor_dice": 0.3648,
+        "mean_dice": 0.4067,
+        "epoch_time_min": 13.0
+      },
+      {
+        "epoch": 7,
+        "train_loss": 0.9118,
+        "val_loss": 0.9038,
+        "kidney_dice": 0.7789,
+        "tumor_dice": 0.3374,
+        "mean_dice": 0.5581,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 8,
+        "train_loss": 0.9128,
+        "val_loss": 0.9555,
+        "kidney_dice": 0.6128,
+        "tumor_dice": 0.1731,
+        "mean_dice": 0.3929,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 9,
+        "train_loss": 0.898,
+        "val_loss": 0.8933,
+        "kidney_dice": 0.668,
+        "tumor_dice": 0.2272,
+        "mean_dice": 0.4476,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 10,
+        "train_loss": 0.9557,
+        "val_loss": 0.8287,
+        "kidney_dice": 0.6821,
+        "tumor_dice": 0.3889,
+        "mean_dice": 0.5355,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 11,
+        "train_loss": 0.876,
+        "val_loss": 0.7611,
+        "kidney_dice": 0.7856,
+        "tumor_dice": 0.2358,
+        "mean_dice": 0.5107,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 12,
+        "train_loss": 0.8251,
+        "val_loss": 0.7599,
+        "kidney_dice": 0.7354,
+        "tumor_dice": 0.3322,
+        "mean_dice": 0.5338,
+        "epoch_time_min": 11.6
+      },
+      {
+        "epoch": 13,
+        "train_loss": 0.8784,
+        "val_loss": 0.741,
+        "kidney_dice": 0.7672,
+        "tumor_dice": 0.2601,
+        "mean_dice": 0.5136,
+        "epoch_time_min": 11.7
+      },
+      {
+        "epoch": 14,
+        "train_loss": 0.7816,
+        "val_loss": 0.7152,
+        "kidney_dice": 0.7156,
+        "tumor_dice": 0.3637,
+        "mean_dice": 0.5396,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 15,
+        "train_loss": 0.7978,
+        "val_loss": 0.7129,
+        "kidney_dice": 0.7647,
+        "tumor_dice": 0.3077,
+        "mean_dice": 0.5362,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 16,
+        "train_loss": 0.7463,
+        "val_loss": 0.7237,
+        "kidney_dice": 0.7544,
+        "tumor_dice": 0.3192,
+        "mean_dice": 0.5368,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 17,
+        "train_loss": 0.7303,
+        "val_loss": 0.7761,
+        "kidney_dice": 0.8563,
+        "tumor_dice": 0.3803,
+        "mean_dice": 0.6183,
+        "epoch_time_min": 12.1
+      },
+      {
+        "epoch": 18,
+        "train_loss": 0.7334,
+        "val_loss": 0.6759,
+        "kidney_dice": 0.8442,
+        "tumor_dice": 0.3611,
+        "mean_dice": 0.6026,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 19,
+        "train_loss": 0.7264,
+        "val_loss": 0.6182,
+        "kidney_dice": 0.8761,
+        "tumor_dice": 0.2734,
+        "mean_dice": 0.5747,
+        "epoch_time_min": 12.7
+      },
+      {
+        "epoch": 20,
+        "train_loss": 0.7066,
+        "val_loss": 0.7047,
+        "kidney_dice": 0.7769,
+        "tumor_dice": 0.3336,
+        "mean_dice": 0.5552,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 21,
+        "train_loss": 0.7025,
+        "val_loss": 0.8298,
+        "kidney_dice": 0.6712,
+        "tumor_dice": 0.2538,
+        "mean_dice": 0.4625,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 22,
+        "train_loss": 0.6635,
+        "val_loss": 0.6571,
+        "kidney_dice": 0.7992,
+        "tumor_dice": 0.2961,
+        "mean_dice": 0.5477,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 23,
+        "train_loss": 0.6637,
+        "val_loss": 0.6176,
+        "kidney_dice": 0.8822,
+        "tumor_dice": 0.3244,
+        "mean_dice": 0.6033,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 24,
+        "train_loss": 0.6469,
+        "val_loss": 0.6933,
+        "kidney_dice": 0.8189,
+        "tumor_dice": 0.4538,
+        "mean_dice": 0.6364,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 25,
+        "train_loss": 0.6291,
+        "val_loss": 0.6267,
+        "kidney_dice": 0.8355,
+        "tumor_dice": 0.4754,
+        "mean_dice": 0.6555,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 26,
+        "train_loss": 0.6275,
+        "val_loss": 0.5828,
+        "kidney_dice": 0.8489,
+        "tumor_dice": 0.3739,
+        "mean_dice": 0.6114,
+        "epoch_time_min": 11.6
+      },
+      {
+        "epoch": 27,
+        "train_loss": 0.6352,
+        "val_loss": 0.7826,
+        "kidney_dice": 0.7834,
+        "tumor_dice": 0.3845,
+        "mean_dice": 0.5839,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 28,
+        "train_loss": 0.6069,
+        "val_loss": 0.6141,
+        "kidney_dice": 0.8039,
+        "tumor_dice": 0.3955,
+        "mean_dice": 0.5997,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 29,
+        "train_loss": 0.6538,
+        "val_loss": 0.6283,
+        "kidney_dice": 0.6666,
+        "tumor_dice": 0.4394,
+        "mean_dice": 0.553,
+        "epoch_time_min": 12.1
+      },
+      {
+        "epoch": 30,
+        "train_loss": 0.6133,
+        "val_loss": 0.6733,
+        "kidney_dice": 0.762,
+        "tumor_dice": 0.432,
+        "mean_dice": 0.597,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 31,
+        "train_loss": 0.6309,
+        "val_loss": 0.6024,
+        "kidney_dice": 0.9388,
+        "tumor_dice": 0.3966,
+        "mean_dice": 0.6677,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 32,
+        "train_loss": 0.6052,
+        "val_loss": 0.6536,
+        "kidney_dice": 0.7905,
+        "tumor_dice": 0.4768,
+        "mean_dice": 0.6336,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 33,
+        "train_loss": 0.5928,
+        "val_loss": 0.6605,
+        "kidney_dice": 0.8311,
+        "tumor_dice": 0.3352,
+        "mean_dice": 0.5831,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 34,
+        "train_loss": 0.5963,
+        "val_loss": 0.6669,
+        "kidney_dice": 0.8645,
+        "tumor_dice": 0.4451,
+        "mean_dice": 0.6548,
+        "epoch_time_min": 11.4
+      },
+      {
+        "epoch": 35,
+        "train_loss": 0.5666,
+        "val_loss": 0.599,
+        "kidney_dice": 0.8557,
+        "tumor_dice": 0.4184,
+        "mean_dice": 0.637,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 36,
+        "train_loss": 0.5662,
+        "val_loss": 0.559,
+        "kidney_dice": 0.8666,
+        "tumor_dice": 0.3965,
+        "mean_dice": 0.6315,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 37,
+        "train_loss": 0.5564,
+        "val_loss": 0.6387,
+        "kidney_dice": 0.807,
+        "tumor_dice": 0.3808,
+        "mean_dice": 0.5939,
+        "epoch_time_min": 12.1
+      },
+      {
+        "epoch": 38,
+        "train_loss": 0.5428,
+        "val_loss": 0.5908,
+        "kidney_dice": 0.8244,
+        "tumor_dice": 0.4606,
+        "mean_dice": 0.6425,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 39,
+        "train_loss": 0.5793,
+        "val_loss": 0.5384,
+        "kidney_dice": 0.9004,
+        "tumor_dice": 0.3944,
+        "mean_dice": 0.6474,
+        "epoch_time_min": 11.7
+      },
+      {
+        "epoch": 40,
+        "train_loss": 0.5617,
+        "val_loss": 0.6485,
+        "kidney_dice": 0.8676,
+        "tumor_dice": 0.5106,
+        "mean_dice": 0.6891,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 41,
+        "train_loss": 0.5637,
+        "val_loss": 0.6796,
+        "kidney_dice": 0.7666,
+        "tumor_dice": 0.3466,
+        "mean_dice": 0.5566,
+        "epoch_time_min": 11.7
+      },
+      {
+        "epoch": 42,
+        "train_loss": 0.576,
+        "val_loss": 0.5458,
+        "kidney_dice": 0.8637,
+        "tumor_dice": 0.3686,
+        "mean_dice": 0.6161,
+        "epoch_time_min": 12.6
+      },
+      {
+        "epoch": 43,
+        "train_loss": 0.5537,
+        "val_loss": 0.6041,
+        "kidney_dice": 0.8125,
+        "tumor_dice": 0.3694,
+        "mean_dice": 0.5909,
+        "epoch_time_min": 11.7
+      },
+      {
+        "epoch": 44,
+        "train_loss": 0.5221,
+        "val_loss": 0.6861,
+        "kidney_dice": 0.8477,
+        "tumor_dice": 0.5162,
+        "mean_dice": 0.682,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 45,
+        "train_loss": 0.519,
+        "val_loss": 0.6917,
+        "kidney_dice": 0.8108,
+        "tumor_dice": 0.5868,
+        "mean_dice": 0.6988,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 46,
+        "train_loss": 0.5228,
+        "val_loss": 0.6421,
+        "kidney_dice": 0.8033,
+        "tumor_dice": 0.3154,
+        "mean_dice": 0.5593,
+        "epoch_time_min": 12.3
+      },
+      {
+        "epoch": 47,
+        "train_loss": 0.5361,
+        "val_loss": 0.6756,
+        "kidney_dice": 0.7912,
+        "tumor_dice": 0.3934,
+        "mean_dice": 0.5923,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 48,
+        "train_loss": 0.5354,
+        "val_loss": 0.646,
+        "kidney_dice": 0.8384,
+        "tumor_dice": 0.4266,
+        "mean_dice": 0.6325,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 49,
+        "train_loss": 0.5314,
+        "val_loss": 0.6346,
+        "kidney_dice": 0.8435,
+        "tumor_dice": 0.3527,
+        "mean_dice": 0.5981,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 50,
+        "train_loss": 0.4999,
+        "val_loss": 0.6229,
+        "kidney_dice": 0.8915,
+        "tumor_dice": 0.4386,
+        "mean_dice": 0.665,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 51,
+        "train_loss": 0.5233,
+        "val_loss": 0.6392,
+        "kidney_dice": 0.7771,
+        "tumor_dice": 0.4457,
+        "mean_dice": 0.6114,
+        "epoch_time_min": 11.5
+      },
+      {
+        "epoch": 52,
+        "train_loss": 0.533,
+        "val_loss": 0.6808,
+        "kidney_dice": 0.8358,
+        "tumor_dice": 0.4447,
+        "mean_dice": 0.6403,
+        "epoch_time_min": 12.2
+      },
+      {
+        "epoch": 53,
+        "train_loss": 0.4973,
+        "val_loss": 0.755,
+        "kidney_dice": 0.7193,
+        "tumor_dice": 0.376,
+        "mean_dice": 0.5476,
+        "epoch_time_min": 12.0
+      },
+      {
+        "epoch": 54,
+        "train_loss": 0.5248,
+        "val_loss": 0.5763,
+        "kidney_dice": 0.8755,
+        "tumor_dice": 0.3958,
+        "mean_dice": 0.6356,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 55,
+        "train_loss": 0.53,
+        "val_loss": 0.6919,
+        "kidney_dice": 0.7866,
+        "tumor_dice": 0.4887,
+        "mean_dice": 0.6377,
+        "epoch_time_min": 11.8
+      },
+      {
+        "epoch": 56,
+        "train_loss": 0.5285,
+        "val_loss": 0.6687,
+        "kidney_dice": 0.7718,
+        "tumor_dice": 0.4464,
+        "mean_dice": 0.6091,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 57,
+        "train_loss": 0.5035,
+        "val_loss": 0.7788,
+        "kidney_dice": 0.7133,
+        "tumor_dice": 0.5838,
+        "mean_dice": 0.6485,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 58,
+        "train_loss": 0.4801,
+        "val_loss": 0.6685,
+        "kidney_dice": 0.8302,
+        "tumor_dice": 0.4485,
+        "mean_dice": 0.6393,
+        "epoch_time_min": 11.9
+      },
+      {
+        "epoch": 59,
+        "train_loss": 0.5139,
+        "val_loss": 0.5887,
+        "kidney_dice": 0.9189,
+        "tumor_dice": 0.4263,
+        "mean_dice": 0.6726,
+        "epoch_time_min": 12.4
+      },
+      {
+        "epoch": 60,
+        "train_loss": 0.5203,
+        "val_loss": 0.5866,
+        "kidney_dice": 0.8651,
+        "tumor_dice": 0.4767,
+        "mean_dice": 0.6709,
+        "epoch_time_min": 11.6
+      }
+    ]
+  }
+}

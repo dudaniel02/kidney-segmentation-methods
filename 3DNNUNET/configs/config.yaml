@@ -1,0 +1,56 @@
+# ============================================================
+# KiTS19 Two-Stage nnU-Net Pipeline — Master Configuration
+# ============================================================
+# Edit the paths below to match your system, then every script
+# reads from this file. No more hardcoded paths.
+
+# --- Paths ---
+paths:
+  kits19_root: "/home/coder/projects/3DNNUNET/data"
+  nnunet_raw: "/home/coder/projects/3DNNUNET/outputs/nnUNet_raw"
+  nnunet_preprocessed: "/home/coder/projects/3DNNUNET/outputs/nnUNet_preprocessed"
+  nnunet_results: "/home/coder/projects/3DNNUNET/outputs/nnUNet_results"
+  predictions_stage1: "/home/coder/projects/3DNNUNET/outputs/predictions/stage1"
+  predictions_stage2: "/home/coder/projects/3DNNUNET/outputs/predictions/stage2"
+  final_output: "/home/coder/projects/3DNNUNET/outputs/predictions/final"
+
+# --- Dataset IDs ---
+datasets:
+  stage1_id: 999                               # Dataset999_KiTS19
+  stage1_name: "Dataset999_KiTS19"
+  stage2_id: 998                               # Dataset998_KiTS19_TumorROI
+  stage2_name: "Dataset998_KiTS19_TumorROI"
+
+# --- Architecture ---
+architecture:
+  # Options: "nnUNetPlans" (plain UNet), "nnUNetResEncUNetMPlans" (ResEnc M),
+  #          "nnUNetResEncUNetLPlans" (ResEnc L), "nnUNetResEncUNetXLPlans" (ResEnc XL)
+  planner: "nnUNetPlannerResEncM"
+  plans_name: "nnUNetResEncUNetMPlans"
+  configuration: "3d_fullres"
+  trainer: "nnUNetTrainer"
+
+# --- Training ---
+training:
+  folds: [0, 1, 2, 3, 4]                      # all 5 for ensemble; use [0] for quick test
+  num_epochs: 1000                             # nnU-Net default
+  continue_training: false
+
+# --- ROI Extraction (Stage 2) ---
+roi:
+  padding_voxels: 20                           # margin around kidney+tumour bounding box
+  use_softmax: true                            # use probability maps instead of hard masks
+  softmax_threshold: 0.3                       # threshold for softmax-based ROI
+  min_tumour_voxels: 50                        # skip cases with fewer tumour voxels
+
+# --- Post-processing ---
+postprocessing:
+  remove_small_components: true
+  min_kidney_volume_ml: 5.0                    # remove kidney components < 5 mL
+  min_tumour_volume_ml: 0.1                    # remove tumour components < 0.1 mL
+  keep_n_largest_kidneys: 2                    # anatomically there are 2 kidneys
+
+# --- Evaluation ---
+evaluation:
+  metrics: ["dice", "hausdorff95", "surface_dice"]
+  surface_dice_tolerance_mm: 2.0

@@ -1,0 +1,65 @@
+# ============================================================
+# I-MedSAM requirements  —  V100 32GB, Python 3.12, CUDA 11.x
+# ============================================================
+#
+# Setup:
+#   cd /home/coder/projects/IMedSAM   (or whatever folder name you used)
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install --upgrade pip
+#
+# Install PyTorch first (CUDA 11.8 wheel, works on V100):
+#   pip install torch==2.1.2 torchvision==0.16.2 --index-url https://download.pytorch.org/whl/cu118
+#
+# Then install everything else:
+#   pip install -r requirements.txt
+#
+# Finally, clone and install segment-anything:
+#   git clone https://github.com/facebookresearch/segment-anything.git
+#   pip install -e segment-anything/
+#
+# Download SAM ViT-B checkpoint:
+#   mkdir -p sam_ckp
+#   wget -P sam_ckp https://dl.fbaipublicfiles.com/segment_anything/sam_vit_b_01ec64.pth
+#
+# ============================================================
+
+# ── Core deep learning ────────────────────────────────────────
+# torch + torchvision installed separately (see above)
+timm==0.9.16                  # ViT / transformer backbones used by SAM adapters
+einops==0.7.0                 # tensor rearrangements (used heavily in INR decoder)
+
+# ── Medical imaging I/O ───────────────────────────────────────
+nibabel==5.2.1                # NIfTI read/write (KiTS19)
+SimpleITK==2.3.1              # CT resampling & preprocessing
+pydicom==2.4.4                # DICOM support (optional but useful)
+
+# ── Image processing ──────────────────────────────────────────
+opencv-python-headless==4.9.0.80   # image transforms, no GUI deps
+scikit-image==0.22.0          # morphological ops, connected components
+Pillow==10.2.0                # PIL image loading
+
+# ── Scientific computing ──────────────────────────────────────
+numpy==1.26.4                 # pin to <2.0 for torch 2.1 compatibility
+scipy==1.12.0                 # distance transforms, gaussian filters
+scikit-learn==1.4.1           # metrics, train/val split helpers
+
+# ── Training utilities ────────────────────────────────────────
+tqdm==4.66.2                  # progress bars
+tensorboard==2.16.2           # training curves
+monai==1.3.0                  # 3D medical image transforms & losses
+                              # (sliding window inference, DiceCELoss, etc.)
+
+# ── Implicit neural representation support ───────────────────
+# I-MedSAM uses INR (coordinate-based MLP) for the segmentation decoder
+# No extra package needed — implemented as plain torch MLP
+# but we include these for Fourier feature embeddings:
+# (built into the training script)
+
+# ── Experiment tracking & I/O ─────────────────────────────────
+matplotlib==3.8.3
+pandas==2.2.1
+h5py==3.10.0                  # some SAM fine-tuning pipelines cache embeddings as HDF5
+
+# ── Linting / dev (optional) ─────────────────────────────────
+# pip install black isort  # if you want auto-formatting
